@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
+
+
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	background-color: #FDFFFC;
+	overflow:scroll;
+}
+html{
+	margin:0;
+	padding:0;
+}
+header {
+	background-color:black;
+	height:10rem;
+	width:100%;
+	font-family: 'Gloria Hallelujah';
+	padding: 5% 0;
+	margin:0;
+	padding-bottom: 8%;
+
+}
+h1 {
+	padding-top:0;
+	color:white;
+	text-align: right;
+	margin-bottom: 2%;
+	font-size: 3.5rem;
+	letter-spacing: .5rem;
+	padding-right:5%;
+}
+h2 {
+    color: white;
+    float:right;
+    	font-family: 'Gloria Hallelujah';
+padding-right:2%;
+margin:0;
+}
+#t {
+	width:80%;
+	height:auto;
+	margin-right:10%;
+	margin-top:0;
+	border-radius: 10%;
+	padding-top:0;
+}
+nav {
+	background-color: black;
+	width:35%;
+	height:30rem;
+	float:left;
+}
+button {
+	margin:0 auto;
+	font-size: 1rem;
+	font-family: 'Gloria Hallelujah', 'Trebuchet MS', 'Arial Rounded MT Bold';
+	border-radius: 11px;
+	margin-top:8%;
+	background-color: white;
+	float:right;
+	margin-right:10%;
+	padding:2%;
+}
+#news {
+	width:60%;
+	float: right;
+	margin:0;
+	padding:0;
+	margin-right:4%;
+	max-height: 30rem;
+	overflow:scroll;
+
+}
+li {
+	padding:1%;
+	border: 1px solid black;
+	border-radius:5px;
+	margin:2% 0;
+	list-style-type: none;
+	font-family: 'Palanquin Dark', 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif ;
+	line-height: 1.5rem;
+	padding-right:5%;
+	padding-bottom:8%;
+	font-size:1.1rem;
+	letter-spacing: .02rem;
+
+}
+
+ul {
+	padding:0;
+	margin:0;
+}
+img {
+	width:5%;
+	float:right;
+	padding-top:2.5%;
+}
+
+
+@media screen and (max-width:810px){
+	h1 {
+		font-size:3rem;
+		
+	}
+	header {
+		padding-bottom:15%;
+		padding-top:10%;
+	}
+	button {
+		margin-left:12%;
+	}
+}
