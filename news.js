@@ -14,8 +14,6 @@ const APl= 'https://newsapi.org/v1/articles?source=associated-press&sortBy=lates
 const Reutersl='https://newsapi.org/v1/articles?source=reuters&sortBy=latest&apiKey=5e754f56c9474684b20e15b2671f4198';
 const Nwswkl='https://newsapi.org/v1/articles?source=newsweek&sortBy=latest&apiKey=5e754f56c9474684b20e15b2671f4198';
 
-
-const btnl=document.getElementById('btnl');
 const btn=document.getElementById('btn');
 const articles=document.getElementById('articles');
 
@@ -48,7 +46,6 @@ fetch(`${time}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -80,7 +77,7 @@ fetch(`${AP}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -111,7 +108,7 @@ fetch(`${CNN}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -142,7 +139,7 @@ fetch(`${Google}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -173,7 +170,7 @@ fetch(`${Washington}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -203,7 +200,7 @@ fetch(`${Reuters}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -233,7 +230,7 @@ fetch(`${Independent}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -263,7 +260,7 @@ fetch(`${Skynews}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -293,7 +290,7 @@ fetch(`${Nwswk}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -324,7 +321,7 @@ fetch(`${timel}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -356,7 +353,7 @@ fetch(`${APl}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -389,7 +386,7 @@ fetch(`${Reutersl}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -421,7 +418,7 @@ fetch(`${Nwswkl}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                
+
                 append(a, img);
                 append(story, a);
                 append(articles, story);
@@ -431,6 +428,32 @@ fetch(`${Nwswkl}`)
 .catch((e) => {
     console.log(e,"error");
 });
+
+
+function removeDuplicates() {
+    
+    // let list=document.querySelectorAll('li');
+    // console.log(list);
+    // list.forEach(li=> console.log(li.getAttribute('innerHTML')));
+
+  let nodelist=document.getElementById('articles').childNodes;
+  console.log(nodelist);
+ for(let key of nodelist.keys()){
+     console.log(key);
+ }
+  
+//   nodelist.forEach(function(li){
+//       console.log(li.innerHTML);
+//   });
+//   for(let i=0; i<nodelist.length;i++){
+//       console.log(nodelist[i].innerHTML);
+//   }
+  
+// nodelist.forEach(childNodes=> console.log(childNodes.getAttribute('innerHTML')));
+    
+}
+
+removeDuplicates();
 
 
 });

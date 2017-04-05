@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
 
-
+html {
+	max-width:1100px;
+}
 body {
 	width:100%;
 	margin:0;
