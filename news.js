@@ -16,7 +16,7 @@ const Nwswkl='https://newsapi.org/v1/articles?source=newsweek&sortBy=latest&apiK
 
 const btn=document.getElementById('btn');
 const articles=document.getElementById('articles');
-
+let myAr=[];
 
 btn.addEventListener("click", (e) => {
     
@@ -46,9 +46,15 @@ fetch(`${time}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-                append(a, img);
+                 if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
+                
             }
         }
     })
@@ -77,10 +83,14 @@ fetch(`${AP}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-
-                append(a, img);
+if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -109,9 +119,14 @@ fetch(`${CNN}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+               if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -139,10 +154,14 @@ fetch(`${Google}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-
-                append(a, img);
+if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -171,9 +190,14 @@ fetch(`${Washington}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+                if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -201,9 +225,14 @@ fetch(`${Reuters}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+                if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -231,9 +260,14 @@ fetch(`${Independent}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+                if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -261,9 +295,14 @@ fetch(`${Skynews}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+                if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -291,9 +330,14 @@ fetch(`${Nwswk}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+                if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -321,10 +365,14 @@ fetch(`${timel}`)
                 let story=createNode('li');
                 let article=data.articles[i].title;
                 story.innerHTML=article;
-
-                append(a, img);
+if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -354,9 +402,14 @@ fetch(`${APl}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+                if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -387,9 +440,14 @@ fetch(`${Reutersl}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+               if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
@@ -419,41 +477,20 @@ fetch(`${Nwswkl}`)
                 let article=data.articles[i].title;
                 story.innerHTML=article;
 
-                append(a, img);
+                if(myAr.indexOf(article)===-1){
+                     append(a, img);
                 append(story, a);
                 append(articles, story);
+                myAr.push(article);
+                 } else {
+                     console.log('redacted');
+                 }
             }
         }
     })
 .catch((e) => {
     console.log(e,"error");
 });
-
-
-function removeDuplicates() {
-    
-    // let list=document.querySelectorAll('li');
-    // console.log(list);
-    // list.forEach(li=> console.log(li.getAttribute('innerHTML')));
-
-  let nodelist=document.getElementById('articles').childNodes;
-  console.log(nodelist);
- for(let key of nodelist.keys()){
-     console.log(key);
- }
-  
-//   nodelist.forEach(function(li){
-//       console.log(li.innerHTML);
-//   });
-//   for(let i=0; i<nodelist.length;i++){
-//       console.log(nodelist[i].innerHTML);
-//   }
-  
-// nodelist.forEach(childNodes=> console.log(childNodes.getAttribute('innerHTML')));
-    
-}
-
-removeDuplicates();
 
 
 });

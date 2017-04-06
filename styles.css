@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
 
-html {
-	max-width:1100px;
-}
+
 body {
 	width:100%;
 	margin:0;
@@ -14,13 +12,15 @@ body {
 html{
 	margin:0;
 	padding:0;
+	
+
 }
 header {
 	background-color:black;
 	height:10rem;
 	width:100%;
 	font-family: 'Gloria Hallelujah';
-	padding: 5% 0;
+	padding: 1% 0;
 	margin:0;
 	padding-bottom: 8%;
 
@@ -52,7 +52,7 @@ margin:0;
 nav {
 	background-color: black;
 	width:35%;
-	height:30rem;
+	min-height:30rem;
 	float:left;
 }
 button {
@@ -104,7 +104,7 @@ img {
 
 @media screen and (max-width:810px){
 	h1 {
-		font-size:3rem;
+		font-size:2rem;
 		
 	}
 	header {
