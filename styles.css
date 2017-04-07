@@ -100,7 +100,9 @@ img {
 	float:right;
 	padding-top:2.5%;
 }
-
+.red {
+	background-color:red;
+}
 
 @media screen and (max-width:810px){
 	h1 {

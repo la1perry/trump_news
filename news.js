@@ -19,7 +19,7 @@ const articles=document.getElementById('articles');
 let myAr=[];
 
 btn.addEventListener("click", (e) => {
-    
+    e.preventDefault();
     function createNode(element){
          return document.createElement(element);
      }
@@ -493,11 +493,6 @@ fetch(`${Nwswkl}`)
 });
 
 
-});
 
- 
- 
- 
- 
- 
+});
 
